@@ -7,7 +7,7 @@ function play {
         return
     }
 
-    # проверка на указание громкости от пользователя, если есть то не трогаем 
+    # шаманство с громкостью (если заранее задать то не прокает установка на 35 кароче) 
     $userSetVolume = $false
     for ($i = 0; $i -lt $Rest.Count; $i++) {
         if ($Rest[$i] -match '^--volume(=|\s*)\d+$') { $userSetVolume = $true; break }
@@ -60,4 +60,10 @@ if (Get-Module -ListAvailable PSReadLine) {
         InlinePrediction = 'DarkGray'
     }
 }
+
+$PSStyle.FileInfo.Script   = $PSStyle.Foreground.DarkCyan
+$PSStyle.FileInfo.Extension['.ps1']  = $PSStyle.Foreground.DarkCyan
+$PSStyle.FileInfo.Extension['.psm1'] = $PSStyle.Foreground.DarkCyan
+$PSStyle.FileInfo.Extension['.psd1'] = $PSStyle.Foreground.DarkCyan
+$PSStyle.Formatting.TableHeader = $PSStyle.Foreground.DarkBlue
 
