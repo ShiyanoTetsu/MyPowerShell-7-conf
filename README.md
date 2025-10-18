@@ -35,10 +35,10 @@ play *.mp3
 play --volume=55 *.mp3
 
 # download audio from YouTube
-ytmp3 <url>
+ytmp3 < url >
 
 or
 
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 <url>
+yt-dlp -f bestaudio --extract-audio --audio-format mp3 < url >
 
  
