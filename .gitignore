@@ -1,0 +1,5 @@
+#hehe hoo hoo 
+*.ps1.local
+*.secret.json
+.DS_Store
+Thumbs.db
